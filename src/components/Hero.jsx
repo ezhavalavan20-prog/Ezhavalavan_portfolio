@@ -3,6 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 // Adjusted import path for the video
 import heroVideo from '../assets/hero video/herovideo.mp4';
+import heroPoster from '../assets/hero video/hero-poster.jpg';
 
 const Hero = () => {
   const videoRef = useRef(null);
@@ -48,6 +49,7 @@ const Hero = () => {
           loop
           playsInline
           preload="auto"
+          poster={heroPoster}
           onPlay={() => setIsPlaying(true)}
           onPause={() => setIsPlaying(false)}
           className="absolute inset-0 w-full h-full"
@@ -61,7 +63,7 @@ const Hero = () => {
           className="absolute -translate-x-1/2 -translate-y-1/2 rounded-full pointer-events-none"
           style={{
             left: '90.6%',
-            top: '85.1%',
+            top: '83.3%',
             width: '7%',
             height: '12.5%',
             background: 'radial-gradient(closest-side, rgb(37 26 28) 65%, rgb(37 26 28 / 0) 100%)',
