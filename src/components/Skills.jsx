@@ -17,7 +17,7 @@ const Skills = () => {
     },
     {
       category: 'Engineering Deliverables',
-      skills: ['Technical Queries', 'Material Requisitions', 'Mechanical Data Sheets', 'Basis of Design', 'BOM & MTO', 'Excel Design Calculations', 'Vendor Drawing Review', 'U-Stamp Drawings'],
+      skills: ['Technical Queries', 'Material Requisitions', 'Mechanical Data Sheets', 'Basis of Design', 'BOM & MTO', 'Manual Calculations', 'Vendor Drawing Review', 'U-Stamp Drawings', 'Technical Bid Evaluation (TBE)'],
     },
   ];
  

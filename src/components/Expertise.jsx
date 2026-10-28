@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { motion, useScroll, useSpring, useMotionValueEvent } from 'framer-motion';
 
-const TagCard = ({ number, title, text, className, aosDelay, aosType, pathLength, containerRef }) => {
+const TagCard = ({ number, title, text, items, className, aosDelay, aosType, pathLength, containerRef }) => {
   const ref = useRef(null);
   const [isActive, setIsActive] = useState(false);
 
@@ -47,10 +47,22 @@ const TagCard = ({ number, title, text, className, aosDelay, aosType, pathLength
         <h3 className={`text-2xl font-black mb-3 tracking-tight transition-colors duration-700 ${isActive ? 'text-white' : 'text-gray-900'
           }`}>{title}</h3>
 
-        <p className={`text-sm leading-relaxed font-medium transition-colors duration-700 ${isActive ? 'text-red-100' : 'text-gray-500'
-          }`}>
-          {text}
-        </p>
+        {items ? (
+          <ol className={`flex flex-col gap-1.5 text-sm leading-snug font-medium transition-colors duration-700 ${isActive ? 'text-red-100' : 'text-gray-500'
+            }`}>
+            {items.map((item, idx) => (
+              <li key={item} className="flex gap-2">
+                <span className={`font-bold tabular-nums shrink-0 transition-colors duration-700 ${isActive ? 'text-white' : 'text-gray-900'}`}>{idx + 1}.</span>
+                {item}
+              </li>
+            ))}
+          </ol>
+        ) : (
+          <p className={`text-sm leading-relaxed font-medium transition-colors duration-700 ${isActive ? 'text-red-100' : 'text-gray-500'
+            }`}>
+            {text}
+          </p>
+        )}
       </div>
     </div>
   );
@@ -171,7 +183,7 @@ const Expertise = () => {
           <TagCard
             number="01"
             title="Pressure Vessels & Heat Exchangers"
-            text="Design and detailed engineering of pressure vessels, heat exchangers, columns and air receivers to ASME Section VIII Div. 1 & 2 using PV Elite, NozzlePRO and FEA."
+            text="Design and detailed engineering of pressure vessels, heat exchangers and columns to ASME Section VIII Div. 1 & 2 using PV Elite, NozzlePRO and FEA."
             className="md:absolute md:top-[10px] md:right-[5%] lg:right-[10%] rotate-2 md:rotate-6"
             aosType="fade-left"
             aosDelay="100"
@@ -192,7 +204,8 @@ const Expertise = () => {
           <TagCard
             number="03"
             title="Engineering Deliverables"
-            text="Technical Queries, Material Requisitions, Mechanical Data Sheets, Basis of Design, BOMs, MTOs and Technical Delivery Conditions for detailed engineering." className="md:absolute md:top-[700px] md:right-[5%] lg:right-[15%] rotate-1 md:rotate-3"
+            items={['Technical Queries (TQs)', 'Technical Bid Evaluation (TBE)', 'Material Requisitions (MRs)', 'Mechanical Data Sheets (MDS)', 'Basis of Design (BOD)', 'Bills of Materials (BOMs)', 'Material Take-Offs (MTOs)', 'Technical Delivery Conditions (TDC)']}
+            className="md:absolute md:top-[700px] md:right-[5%] lg:right-[15%] rotate-1 md:rotate-3"
             aosType="fade-left"
             aosDelay="300"
             pathLength={pathLength}
@@ -202,7 +215,7 @@ const Expertise = () => {
           <TagCard
             number="04"
             title="Certification & Site Support"
-            text="ASME U-Stamp drawings and calculations, vendor document review, and hands-on coordination with fabrication and construction teams to resolve site issues."
+            text="ASME U-Stamp drawings and calculations, vendor document review, and hands-on coordination with shop, fabrication and construction teams to resolve site issues."
             className="md:absolute md:top-[1050px] md:left-[15%] lg:left-[25%] -rotate-1 md:-rotate-3"
             aosType="fade-right"
             aosDelay="400"

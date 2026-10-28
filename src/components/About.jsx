@@ -45,10 +45,10 @@ const About = () => {
           
           <h2 className="text-4xl md:text-5xl font-black text-black mb-4">Hello!</h2>
           <p className="text-lg font-bold mb-6 leading-relaxed max-w-3xl text-red-50">
-            I'm <span className="text-black text-xl font-black mx-1 tracking-wide uppercase">Ezhavalavan V</span>, a Static Equipment Design Engineer at Gulf Spic Contracting Company, Shuaiba, Kuwait, working on EPC projects across upstream and downstream Oil & Gas, petrochemical and industrial sectors.
+            I'm <span className="text-black text-xl font-black mx-1 tracking-wide uppercase">Ezhavalavan V</span>, a Static Equipment Design Engineer currently working in Gulf Spic General Trading & Contracting Company W.L.L, Shuaiba, Kuwait, on EPC projects across upstream and downstream Oil & Gas, petrochemical and industrial sectors.
           </p>
           <p className="text-base font-medium mb-10 leading-relaxed max-w-3xl text-red-50/90">
-            I design pressure vessels, heat exchangers, storage tanks and columns to ASME Section VIII Div. 1 & 2, API 650, WRC 107/297, IBR 1950 and IS 9178. I've also represented the mechanical engineering department as an auditee during ASME U-Stamp, U-Stamp re-certification, R-Stamp and ISO audits.
+            I design pressure vessels, heat exchangers, storage tanks and columns to ASME Section VIII Div. 1 & 2, API 650, WRC 107/297, IBR 1950 and IS 9178. I've also represented the mechanical engineering department as an auditee during ASME U-Stamp, U-Stamp re-certification, R-Stamp, S-Stamp and ISO audits.
           </p>
 
           {/* Stats Row */}

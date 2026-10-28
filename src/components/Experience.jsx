@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const experienceData = [
   {
     role: 'Static Equipment Design Engineer',
-    company: 'Gulf Spic Contracting Company W.L.L',
+    company: 'Gulf Spic General Trading & Contracting Company W.L.L',
     location: 'Shuaiba, Kuwait',
     duration: 'Sep 2025 – Present',
     equipment: ['Pressure Vessels', 'Heat Exchangers', 'Storage Tanks', 'Skid Packages', 'Pig Launchers & Receivers', 'Rectangular Tanks', 'Columns'],
@@ -12,9 +12,10 @@ const experienceData = [
       'Prepare TQs, MRs, Mechanical Data Sheets, specifications, Basis of Design, BOMs and MTOs.',
       'Review vendor proposals, drawings and calculations against design codes and project specifications.',
       'Design and detailed engineering of pressure vessels, heat exchangers and heavy equipment, including transportation design calculations.',
-      'Review P&IDs, process data, piping specs and instrumentation requirements for mechanical deliverables.',
-      'Coordinate with clients, vendors, fabrication and site teams to resolve engineering issues.',
+      'Review P&IDs, process data, piping specs and instrumentation requirements to prepare mechanical deliverables.',
+      'Coordinate with clients, vendors, shop and site teams to resolve engineering technical queries.',
       'Prepare ASME U-Stamp drawings and manual design calculations to IBR, ASME and API codes in Excel.',
+      'Prepare Technical Bid Evaluations (TBE).',
     ],
   },
   {
@@ -34,14 +35,15 @@ const experienceData = [
   {
     role: 'Junior Mechanical Designer',
     company: 'Venvel Thermal & Mechanical Designers',
-    location: 'Namakkal, India',
+    location: 'Namakkal, Tamil Nadu, India',
     duration: 'May 2019 – Jun 2020',
-    equipment: ['AutoCAD', 'Inventor'],
+    equipment: ['AutoCAD', 'Inventor', 'PV Elite'],
     points: [
       'Prepared GA, detailed, fabrication and part drawings using AutoCAD and Inventor.',
       'Detailed dimensions, tolerances, welding details and material specifications.',
       'Prepared BOMs, Material of Construction details and material take-offs.',
       'Revised drawings based on engineering and fabrication comments and maintained design records.',
+      'Prepared mechanical design calculations using PV Elite.',
     ],
   },
 ];
@@ -79,7 +81,7 @@ const Experience = () => {
 
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-8 mb-5">
                   <div>
-                    <h3 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight">{job.role}</h3>
+                    <h3 className="text-2xl md:text-3xl font-black text-gray-900 tracking-tight uppercase">{job.role}</h3>
                     <p className="text-base md:text-lg font-bold text-[#ff2a2a] mt-1">{job.company}</p>
                     <p className="text-sm text-gray-500 font-medium mt-1">{job.location}</p>
                   </div>
